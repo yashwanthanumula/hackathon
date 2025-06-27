@@ -13,7 +13,6 @@ import { ChatPanel } from '@/components/communication/ChatPanel'
 import { ReactionBar } from '@/components/communication/ReactionBar'
 import { useSocket } from '@/providers/SocketProvider'
 import { usePlayerStore } from '@/store/playerStore'
-import { SocketDebug } from '@/components/debug/SocketDebug'
 
 export default function RoomPage() {
   const params = useParams()
@@ -312,8 +311,6 @@ export default function RoomPage() {
         </motion.div>
       )}
       
-      {/* Debug info */}
-      <SocketDebug />
     </div>
   )
 }
