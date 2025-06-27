@@ -171,6 +171,8 @@ If you prefer automated deployment:
    - Check Node version compatibility
    - Ensure all dependencies are in package.json
    - Check build logs for specific errors
+   - For TypeScript type errors, ensure @types packages are in dependencies (not devDependencies)
+   - The build command uses `npm ci --include=dev` to install all dependencies
 
 4. **Environment variables not working**:
    - Restart the service after adding variables

@@ -6,7 +6,9 @@
       "Bash(ls:*)",
       "Bash(npm install)",
       "Bash(npm run type-check:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(npm i:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": []
   }

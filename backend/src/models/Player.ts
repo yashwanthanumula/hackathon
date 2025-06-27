@@ -56,7 +56,7 @@ const playerSchema = new Schema<IPlayer>({
 });
 
 // Indexes
-playerSchema.index({ sessionId: 1 });
+// sessionId already has unique index from schema definition
 playerSchema.index({ currentRoom: 1 });
 
 export const Player = mongoose.model<IPlayer>('Player', playerSchema);

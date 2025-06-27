@@ -66,7 +66,7 @@ const roomSchema = new Schema<IRoom>({
 });
 
 // Indexes
-roomSchema.index({ code: 1 });
+// code already has unique index from schema definition
 roomSchema.index({ status: 1, createdAt: -1 });
 
 export const Room = mongoose.model<IRoom>('Room', roomSchema);
