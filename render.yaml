@@ -1,0 +1,46 @@
+services:
+  # Backend API Service
+  - type: web
+    name: puzzlechat-backend
+    runtime: node
+    repo: https://github.com/YOUR_USERNAME/YOUR_REPO # Update with your repo
+    branch: main
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001
+      - key: FRONTEND_URL
+        sync: false # Set manually after frontend is deployed
+      - key: MONGODB_URI
+        sync: false # Set manually with your MongoDB Atlas URI
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false # Set manually
+      - key: CLOUDINARY_API_KEY
+        sync: false # Set manually
+      - key: CLOUDINARY_API_SECRET
+        sync: false # Set manually
+
+  # Frontend Service
+  - type: web
+    name: puzzlechat-frontend
+    runtime: node
+    repo: https://github.com/YOUR_USERNAME/YOUR_REPO # Update with your repo
+    branch: main
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_URL
+        sync: false # Set manually after backend is deployed
+      - key: NEXT_PUBLIC_SOCKET_URL
+        sync: false # Set manually after backend is deployed

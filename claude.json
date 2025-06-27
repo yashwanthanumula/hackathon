@@ -1,0 +1,44 @@
+{
+  "name": "puzzlechat",
+  "description": "Multiplayer image puzzle game with real-time communication",
+  "version": "0.1.0",
+  "settings": {
+    "preferredLanguage": "typescript",
+    "framework": "nextjs",
+    "testCommand": "npm test",
+    "lintCommand": "npm run lint",
+    "buildCommand": "npm run build",
+    "devCommand": "npm run dev"
+  },
+  "context": {
+    "primaryPurpose": "Real-time multiplayer puzzle game with chat, voice, and video features",
+    "techStack": [
+      "Next.js 14 (Frontend)",
+      "Node.js + Express (Backend)",
+      "PostgreSQL (Database)",
+      "Redis (Cache)",
+      "Socket.io (Real-time)",
+      "WebRTC (Video/Audio)",
+      "S3/Cloudinary (Media storage)"
+    ],
+    "keyFeatures": [
+      "Image puzzle gameplay",
+      "Real-time multiplayer",
+      "Text/voice/video chat",
+      "Reaction system",
+      "Room management"
+    ],
+    "developmentGuidelines": [
+      "Use TypeScript for type safety",
+      "Follow Next.js App Router conventions",
+      "Implement proper error boundaries",
+      "Ensure mobile responsiveness",
+      "Optimize for real-time performance"
+    ]
+  },
+  "preferences": {
+    "codeStyle": "modern",
+    "testingApproach": "integration-tests",
+    "documentationLevel": "comprehensive"
+  }
+}
