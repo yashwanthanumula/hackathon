@@ -1,0 +1,251 @@
+# ==========================================
+# General
+# ==========================================
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Testing
+coverage/
+*.lcov
+.nyc_output
+junit.xml
+
+# ==========================================
+# Backend specific
+# ==========================================
+
+# Backend directories
+backend/node_modules/
+backend/dist/
+backend/build/
+backend/logs/
+backend/tmp/
+backend/temp/
+backend/uploads/
+
+# Backend environment files
+backend/.env
+backend/.env.local
+backend/.env.development
+backend/.env.test
+backend/.env.production
+backend/.env.*
+
+# Backend logs
+backend/*.log
+backend/logs/
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/backend.log
+
+# TypeScript
+backend/*.tsbuildinfo
+backend/tsconfig.tsbuildinfo
+
+# ==========================================
+# Frontend specific
+# ==========================================
+
+# Frontend directories
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+frontend/.vercel/
+frontend/.turbo/
+
+# Frontend environment files
+frontend/.env
+frontend/.env.local
+frontend/.env.development
+frontend/.env.test
+frontend/.env.production
+frontend/.env.*
+
+# Frontend logs
+frontend/*.log
+frontend/logs/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/frontend.log
+frontend/backend.log
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+frontend/next-env.d.ts
+
+# ==========================================
+# IDE and Editor files
+# ==========================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ==========================================
+# OS specific
+# ==========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+.nfs*
+
+# ==========================================
+# Project specific
+# ==========================================
+
+# Uploaded files (should use cloud storage)
+uploads/
+public/uploads/
+static/uploads/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Build artifacts
+dist/
+build/
+out/
+compiled/
+
+# Cache directories
+.cache/
+.parcel-cache/
+.turbo/
+.webpack-cache/
+.eslintcache
+.stylelintcache
+
+# Debug files
+debug/
+*.heapsnapshot
+*.cpuprofile
+
+# Test artifacts
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# SSL certificates (keep these secure!)
+*.pem
+*.key
+*.crt
+*.csr
+
+# Claude Code specific
+.claude/cache/
+.claude/logs/
+.claude/tmp/
+
+# Miscellaneous
+.grunt
+.sass-cache/
+.fusebox/
+.dynamodb/
+.tern-port
+.env.vault
+.yarn-integrity
+
+# Test script
+TEST_APP.sh
+
+# Screenshot temporary files
+/var/folders/
