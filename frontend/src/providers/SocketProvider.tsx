@@ -44,7 +44,6 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
 
     newSocket.on('connect_error', (error) => {
       console.error('Socket connection error:', error.message)
-      console.error('Error type:', error.type)
       console.error('Error context:', error)
     })
 

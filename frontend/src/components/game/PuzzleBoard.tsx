@@ -206,12 +206,15 @@ export function PuzzleBoard({ imageUrl, difficulty, onComplete, disabled = false
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className={`absolute inset-0 ${piece.isCorrect || disabled ? 'cursor-default' : 'cursor-move'}`}
-                    draggable={!piece.isCorrect && !disabled}
-                    onDragStart={(e) => handleDragStart(e, piece)}
-                    onDragEnd={handleDragEnd}
-                    onDoubleClick={() => handlePieceDoubleClick(piece)}
+                    className="absolute inset-0"
                   >
+                    <div
+                      className={`w-full h-full ${piece.isCorrect || disabled ? 'cursor-default' : 'cursor-move'}`}
+                      draggable={!piece.isCorrect && !disabled}
+                      onDragStart={(e) => handleDragStart(e, piece)}
+                      onDragEnd={handleDragEnd}
+                      onDoubleClick={() => handlePieceDoubleClick(piece)}
+                    >
                     <div 
                       className={`w-full h-full rounded overflow-hidden transition-all ${
                         piece.isCorrect 
@@ -234,6 +237,7 @@ export function PuzzleBoard({ imageUrl, difficulty, onComplete, disabled = false
                         </div>
                       </div>
                     )}
+                    </div>
                   </motion.div>
                 )}
               </div>
@@ -257,17 +261,19 @@ export function PuzzleBoard({ imageUrl, difficulty, onComplete, disabled = false
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   exit={{ scale: 0 }}
-                  className="relative cursor-move"
+                  className="relative"
                   style={{
                     width: '80px',
                     height: '80px',
                   }}
-                  draggable={!disabled}
-                  onDragStart={(e) => handleDragStart(e, piece)}
-                  onDragEnd={handleDragEnd}
                   whileHover={{ scale: 1.05 }}
-                  whileDrag={{ scale: 1.1, zIndex: 50, opacity: 0.8 }}
                 >
+                  <div
+                    className="w-full h-full cursor-move"
+                    draggable={!disabled}
+                    onDragStart={(e) => handleDragStart(e, piece)}
+                    onDragEnd={handleDragEnd}
+                  >
                   <div 
                     className="w-full h-full rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all border-2 border-gray-300 dark:border-gray-600"
                     style={{
@@ -280,6 +286,7 @@ export function PuzzleBoard({ imageUrl, difficulty, onComplete, disabled = false
                     {!imageLoaded && (
                       <div className="w-full h-full bg-gray-300 dark:bg-gray-600 animate-pulse" />
                     )}
+                  </div>
                   </div>
                 </motion.div>
               ))}
